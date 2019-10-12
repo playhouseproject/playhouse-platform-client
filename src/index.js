@@ -6,6 +6,8 @@ import {loadFonts} from './fonts';
 
 import App from 'components/layout/app';
 
+import Renderer from 'services/renderer';
+
 import {createStore} from 'store';
 
 loadFonts(document.querySelector('.font-samples-container'));
@@ -13,6 +15,7 @@ loadFonts(document.querySelector('.font-samples-container'));
 const store = createStore();
 
 const services = {};
+services.renderer = new Renderer();
 
 const ServiceContext = React.createContext(null);
 
